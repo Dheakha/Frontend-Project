@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+header h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #d8b56a;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: gold;
+    transition: 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    width: 60%;
+    height: auto;
+    margin: 100px auto 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.hero-content>a {
+    display: inline-block;
+    padding: 13px 32px;
+    color: white;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.hero-content>a:hover {
+    background-color: #d8b56a;
+    border-color: #d8b56a;
+    color: black;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    margin: 8px 0 18px;
+    color: white;
+    font-size: 90px;
+    font-weight: 500;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+}
+
+.small-title {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    margin: 0 0 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.intro {
+    min-height: 55vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.intro-small {
+    color: #d8b56a;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.intro h2 {
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.intro-text {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #bdbdbd;
+    font-size: 17px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+.music-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 100px 60px;
+    background-color: black;
+
+}
+
+.category-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.category-heading p {
+    color: #d8b56a;
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.category-heading h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.music-card {
+    width: 280px;
+    padding: 35px 25px;
+    min-height: 360px;
+    background-color: #111;
+    border: 1px solid rgba(216, 181, 106, 0.35);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.music-card h3 {
+    color: #d8b56a;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.music-card p {
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.music-card:hover {
+    transform: translateY(-8px);
+    border-color: #d8b56a;
+    box-shadow: 0 10px 30px rgba(216, 181, 106, 0.15);
+}
+
+.music-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.music-card:hover img {
+    transform: scale(1.05);
+}
+
+footer {
+    padding: 50px 20px;
+    background-color: black;
+    text-align: center;
+    color: #888;
+}
+
+footer p:first-child {
+    color: #d8b56a;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+footer p:last-child {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
